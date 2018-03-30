@@ -1,0 +1,5 @@
+@import "bourbon";
+
+@include font-face("Roboto Condensed", "../fonts/Roboto Condensed/RobotoCondensed-Regular");
+@include font-face("Roboto Condensed", "../fonts/Roboto Condensed/RobotoCondensed-Bold", bold);
+@include font-face("Roboto Condensed", "../fonts/Roboto Condensed/RobotoCondensed-Light", 300);

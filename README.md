@@ -11,5 +11,5 @@
   ```
   Enter this to run build task:
   ```
-  npm start buld
+  npm start build
   ``` 

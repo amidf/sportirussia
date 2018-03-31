@@ -1,10 +1,11 @@
 {
-  "name": "template",
+  "name": "sportirussia",
   "version": "1.0.0",
-  "description": "Test folder with default files.",
+  "description": "The site for school project",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "dev": "gulp",
+    "build": "gulp remove-dist && gulp-dist"
   },
   "author": "Amidf",
   "license": "ISC",

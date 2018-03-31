@@ -11,8 +11,7 @@ const   gulp        = require('gulp'),
         cleaner     = require('gulp-clean'),
         imagemin    = require('gulp-imagemin'),
         autoprefixer = require('gulp-autoprefixer'),
-        rename      = require('gulp-rename'),
-        {phpMinify} = require('@cedx/gulp-php-minify');
+        rename      = require('gulp-rename');
 
 // Task to create local server
 gulp.task('server', ['sass', 'compress-js', 'compress-js-libs', 'compress-css-libs', 'combine-css'], () => {
@@ -26,12 +25,6 @@ gulp.task('server', ['sass', 'compress-js', 'compress-js-libs', 'compress-css-li
     gulp.watch('app/js/**/main.js', ['compress-js']);
     gulp.watch('app/scss/**/*.scss', ['sass', 'combine-css']);
     gulp.watch(['app/*.html', 'app/*.php']).on('change', browserSync.reload);
-});
-
-gulp.task('minify-php', () => {
-  return gulp.src('app/*.php', {read: false})
-    .pipe(phpMinify())
-    .pipe(gulp.dest('app'));
 });
 
 // Task to compile SCSS files to CSS
